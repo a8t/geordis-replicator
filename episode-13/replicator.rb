@@ -1,3 +1,4 @@
+require "pry"
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -64,6 +65,7 @@ class Replicator
     #   glass_inside_replicator
     # And then to see what's inside the glass, use:
     #   glass_inside_replicator.inside.contents
+
     transport_ingredients_to_glass
 
     # This methods mixes the ingredients in the glass around.
@@ -104,7 +106,7 @@ class Replicator
 
   # This transports ingredients into the glass.
   def transport_ingredients_to_glass
-
+  
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
