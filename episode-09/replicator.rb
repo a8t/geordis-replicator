@@ -1,3 +1,4 @@
+require "pry"
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -169,11 +170,12 @@ class Replicator
     # Transport glass from reactor back to inside the replicator.
     # If successful, @enterprise.reactor.core will now be empty
     # and @inside_replicator will once again contain the glass.
-    # transport_glass_from_reactor
+    transport_glass_from_reactor
 
   end
 
   def transport_glass_to_reactor
+
     @enterprise.transporter.energize(
       glass_inside_replicator,
       @inside_replicator,
@@ -182,6 +184,7 @@ class Replicator
   end
 
   def transport_glass_from_reactor
+
     @enterprise.transporter.energize(
       @glass,
       @enterprise.reactor.core,
@@ -190,6 +193,7 @@ class Replicator
   end
 
   def transport_glass_to_replicator_plate
+  
     @enterprise.transporter.energize(
       glass_inside_replicator,
       @inside_replicator,
